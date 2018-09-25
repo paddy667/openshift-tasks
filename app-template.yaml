@@ -42,7 +42,7 @@ objects:
   metadata:
     labels:
       application: ${APPLICATION_NAME}
-    name: ${APPLICATION_NAME}
+    name: ${BUILDCONFIG_NAME}
   spec:
     output:
       to:
@@ -161,6 +161,10 @@ objects:
 parameters:
 - description: The name for the application.
   name: APPLICATION_NAME
+  required: true
+  value: tasks
+- description: The name for the build config
+  name: BUILDCONFIG_NAME
   required: true
   value: tasks
 - description: Git source URI for application
